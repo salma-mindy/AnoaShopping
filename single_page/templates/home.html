@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block ptitle %}
+<b>{{ title }}</b>
+{% endblock %}
+
+{% block body %}           
+
+<section class="sec">
+    <header> 
+        <a href="#"><img src="static/img/logoAnoa.png" class="logo"></a>
+            <ul>
+                <li> <a href="{{ url_for('home') }}" title="Acceuil">Acceuil</a> </li>
+                <li> <a href="{{ url_for('products') }}" title="Produits"> Produits</a> </li>
+                <li> <a href="{{ url_for('news') }}" title="Promotion & nouveaux articles">Quoi de neuf?</a></li>
+                <li> <a href="{{ url_for('newsletter') }}" title="Compte">Compte</a></li>
+                <li> <a href="{{ url_for('contacts') }}" title="Nous contacter">Contacts</a></li>
+            </ul>
+    </header>
+    <div class="content">
+        <div class="textBox">
+             <h3> Bienvenue sur Anoa'Shopping </h3>
+              <p style="color: #D29D46;">
+                Nous vous proposons une large gamme <br>     
+                de produits de qualité pour toutes types de personnes.
+              </p>
+               <a href="{{ url_for('products') }}">Voir tous nos produits</a>
+        </div>
+        <div class="imgBox">
+            <img src="static/img/imafem.png" class="pepsi">
+        </div>
+    </div>
+    <ul class="thumb">
+        <li><img src="static/img/first.png" onclick="imgSlider('static/img/imafem.png');changeBgColor('#1e1e1e')"></li>
+        <li><img src="static/img/child.png" onclick="imgSlider('static/img/fg2.png');changeBgColor('#b74544')"></li>
+        <li><img src="static/img/tnton.png" onclick="imgSlider('static/img/essa.png');changeBgColor('#1e1e1e')"></li>
+    </ul>
+    <ul class="sci">
+        <li> <a href="#"> <img src="static/img/facebook.png"> </a> </li>
+        <li> <a href="#"> <img src="static/img/twitter.png"> </a> </li>
+        <li> <a href="#"> <img src="static/img/instagram.png"> </a> </li>
+    </ul>
+</section>
+<script type="text/javascript">
+    function imgSlider(anything){
+        document.querySelector('.pepsi').src = anything;
+    }
+    function changeBgColor(color){
+        const sec = document.querySelector('.sec');
+        sec.style.background = color;
+    }
+</script>
+{% endblock %}

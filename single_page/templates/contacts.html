@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block body %}
+<<<<<<< HEAD
+=======
+<br><br><br><br><br><br>
+<center>
+<h1>Bienvenue dans contacts</h1>
+<br><br>
+<!-- <card class="card">
+    <form action="">
+        <h2 style="color: #e60909;">Nous contacter</h2>
+        <input type="text" class="testaform" placeholder="Nom">
+            <br><br>
+        <input type="email" class="testaform" placeholder="Email">
+            <br><br>
+        <textarea class="testaform" placeholder="Message"></textarea>
+            <br><br>
+        <input type="submit" class="bouton" value="Envoyer">
+    </form>
+</card> -->
+
+
+
+
+
+
+>>>>>>> 37a66aaea1a90e8adeb9d04b806a04fb3ddfb3da
+
+<!-- alert messages start -->
+    <!-- <div class="alert-success">
+      <span>Message envoyé! Merci de nous avoir contacter! <br>
+           NOus vous donnerons bientôt une suite! <br>
+      </span>
+    </div>
+    <div class="alert-error">
+      <span>Oups! Quelque chose à mal tournée. S'il vous plaît réessayez.</span>
+    </div> -->
+<!-- alert messages end -->
+
+    <!--contact section start-->
+     <div class="contact-section">
+      <div class="contact-info">
+        <div><i class="fas fa-map-marker-alt"></i>Abidjan, Abobo, Belleville</div>
+        <div><i class="fas fa-envelope"></i>anoashopping@gmail.com</div>
+        <div><i class="fas fa-phone"></i>+225 49 06 05 36</div>
+      </div>
+      <div class="contact-form">
+        <h2>Nous contacter</h2>
+        <form class="contact" action="" method="post">
+          <input type="text" name="name" class="text-box" placeholder="Nom" required>
+          <input type="email" name="email" class="text-box" placeholder="Email" required>
+          <textarea name="message" rows="5" placeholder="Message..." required></textarea>
+          <input type="submit" name="submit" class="send-btn" value="Send"> 
+        </form>
+      </div>
+    </div> 
+    <!--contact section end-->
+
+<b>Aller sur la <a href="{{ url_for('home') }}"> page d'acceuil </a></b>
+
+{% endblock %}
